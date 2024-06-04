@@ -35,22 +35,22 @@ function Payment() {
 }
 
   return (
-    <div className="min-h-screen h-auto w-full flex items-center justify-center text-[14px] bg-indigo-950">
-      <div className="w-[900px] h-auto p-6 bg-white rounded-2xl">
+    <div className="min-h-screen h-auto w-full flex items-center justify-center text-[14px] bg-indigo-950 p-5 lg:p-0">
+      <div className="w-full max-w-[500px] md:max-w-[900px] h-auto p-6 bg-white rounded-2xl">
         <FontAwesomeIcon icon={faCircleXmark} className="mb-5 text-[25px] font-extralight" />
         <form className="w-full">
           <h1 className="text-slate-900 font-bold text-[22px] mb-5">Upgrade to a Plus Account</h1>
-          <div className="flex items-start justify-between gap-5 h-auto">
-            <div className="w-[55%] flex flex-col items-start justify-start gap-8">
+          <div className="flex md:flex-row flex-col items-start justify-between gap-5 h-auto">
+            <div className="w-full md:w-[55%] flex flex-col items-start justify-start gap-8">
               <div className="flex flex-col gap-2 items-start justify-start w-full">
                 <label htmlFor="bill" className="text-neutral-600 font-semibold">Billed to</label>
                 <input type="text" id="bill" className="border-[1.5px] border-slate-300 w-full px-3 py-2 rounded-lg outline-none" />
                 <div className="w-full border-2 flex items-center justify-between rounded-lg px-2">
                   <input type="number" className="flex-1 outline-none border-none py-2" placeholder="Card Number" />
-                  <div className="flex items-center justify-start gap-2">
-                    <img src={vsc} alt="1" className="w-[30px] h-[20px] object-cover" />
-                    <img src={msc} alt="2" className="w-[30px] h-[20px] object-cover" />
-                    <img src={ppc} alt="3" className="w-[30px] h-[20px] object-cover" />
+                  <div className="sm:flex items-center justify-start gap-2 hidden">
+                    <img src={vsc} alt="1" className="w-[30px] h-[20px] object-cover border-2" />
+                    <img src={msc} alt="2" className="w-[30px] h-[20px] object-cover border-2" />
+                    <img src={ppc} alt="3" className="w-[30px] h-[20px] object-cover border-2" />
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-2 w-full">
@@ -62,7 +62,7 @@ function Payment() {
                 <label htmlFor="country" className="w-full text-neutral-600 font-semibold">Country</label>
                 <div className="w-full relative mt-2">
                   <select className="w-full p-2 border-[1.5px] border-slate-300 rounded-lg outline-none cursor-pointer" onChange={(e) => setPick(e.target.value)}>
-                    {allCountry.map(country => (<option key={country.name}>{country.name}</option>))}
+                    {allCountry.map(country => (<option key={country.name} value={country.name}>{country.name}</option>))}
                   </select>
                   <div className="absolute w-10 h-full right-8 top-0 flex items-center justify-center pointer-events-none">
                     {allCountry.map(image => image.name === pick ? (<img src={image.flags.png} className="rounded-sm w-full h-6 border-[1px]" alt={image.name} />) : null)}
@@ -71,7 +71,7 @@ function Payment() {
                 <input type="text" placeholder="Zip Code" className="border-[1.5px] border-slate-300 w-full rounded-lg p-2 outline-none mt-3" />
               </div>
             </div>
-            <div className="w-[45%] flex flex-col items-start justify-start gap-2">
+            <div className="w-full md:w-[45%] flex flex-col items-start justify-start gap-2">
               <p className='text-neutral-600 font-semibold'>Membership Type</p>
               <div
                 className={`flex items-center justify-start gap-2 border-[1.5px] w-full rounded-lg py-5 px-2 cursor-pointer  ${plan === 1 ? 'border-blue-500' : ''}`}
@@ -98,7 +98,7 @@ function Payment() {
                 Upgrade to plus</button>
             </div>
           </div>
-          <p className="text-[14px] text-slate-500  w-[55%] mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit alias suscipit hic, maxime excepturi.</p>
+          <p className="w-full md:w-[55%] text-[14px] text-slate-500 mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit alias suscipit hic, maxime excepturi.</p>
           <div className="mt-12">
             <p className='text-[20px] font-bold text-slate-900'>${subscription.price}.00 / {subscription.name} / User</p>
             <p className="text-blue-400 text-[14px]">Details</p>
