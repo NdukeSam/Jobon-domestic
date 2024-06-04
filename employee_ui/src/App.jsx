@@ -1,11 +1,22 @@
-import { useState } from 'react'  
+import { useState } from 'react';
+import Navbar from './components/Navbar.jsx';
 import Landing from "./components/Landing.jsx";
+import PreferenceSearch from './components/PreferenceSearch.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
-      <Landing></Landing>
+      <Navbar></Navbar>
+      <Router>
+          <Routes>
+            <Route 
+              path='/'
+                element={<Landing />}
+            />
+          </Routes>
+      </Router>
     </>
   )
 }
