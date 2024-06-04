@@ -93,7 +93,7 @@ function Payment() {
                   <p className='text-neutral-400'>$300 / year per member</p>
                 </div>
               </div>
-              <button className='w-full bg-blue-500 py-3 rounded-lg text-white flex items-center justify-center gap-4 mt-4 hover:opacity-90' onClick={(e)=> submit(e)}>
+              <button type='submit' className='w-full bg-blue-500 py-3 rounded-lg text-white flex items-center justify-center gap-4 mt-4 hover:opacity-90' onClick={(e)=> submit(e)}>
                 <FontAwesomeIcon icon={faBolt} />
                 Upgrade to plus</button>
             </div>

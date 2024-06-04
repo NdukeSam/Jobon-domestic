@@ -8,7 +8,7 @@ const CustomCheckbox = ({ checked }) => {
           id="cbx-12"
           type="checkbox"
           checked={checked}
-          className="absolute top-0 left-0 w-full h-full appearance-none cursor-pointer border-2 border-gray-400 rounded-full"
+          className={`absolute top-0 left-0 w-full h-full appearance-none cursor-pointer border-2 ${checked ? 'border-blue-500' : 'border-gray-400'} rounded-full`}
           readOnly
         />
         <label
@@ -18,7 +18,7 @@ const CustomCheckbox = ({ checked }) => {
         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" className="absolute top-1 left-1 z-10 pointer-events-none">
           <path
             d="M2 8.36364L6.23077 12L13 2"
-            className="stroke-white stroke-3 stroke-linecap-round stroke-linejoin-round"
+            className="stroke-blue-500 stroke-3 stroke-linecap-round stroke-linejoin-round"
             style={{ strokeDasharray: 19, strokeDashoffset: checked ? 0 : 19, transition: 'stroke-dashoffset 0.3s ease', transitionDelay: '0.2s' }}
           ></path>
         </svg>
