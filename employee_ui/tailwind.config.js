@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundColor: '#524B6B'
+      backgroundColor: {
+      'main': '#524B6B'
+      }
     },
   },
   plugins: [],
