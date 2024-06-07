@@ -35,7 +35,8 @@ function Payment() {
 }
 
   return (
-    <div className="min-h-screen h-auto w-full flex items-center justify-center text-[14px] bg-indigo-950 p-5 lg:p-0">
+    <div className="min-h-screen h-auto w-full flex flex-col items-center justify-start gap-10 text-[14px] bg-indigo-950 p-5 lg:p-0">
+    <div className=' mt-5 text-start w-full lg:px-[8%] md:px-4 text-[32px] font-semibold text-white'>jobOn</div>
       <div className="w-full max-w-[500px] md:max-w-[900px] h-auto p-6 bg-white rounded-2xl">
         <FontAwesomeIcon icon={faCircleXmark} className="mb-5 text-[25px] font-extralight" />
         <form className="w-full">

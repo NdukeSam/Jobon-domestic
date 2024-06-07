@@ -69,6 +69,9 @@ function Doc() {
             fileInputRef.current.value = ''; // Clear the file input
             setMessage(""); // Clear message when moving to the next file
             setShowLoader(false); // Ensure loader is hidden
+        }else{
+            setMessage('Please select a file to upload.'); // Set no file selected message
+            setShowLoader(true); // Show the loader
         }
     }
 
@@ -103,15 +106,13 @@ function Doc() {
                 </div>
 
                 {message && (
-                    <div className="w-full text-center mt-4">
-                        <h1>{message}</h1>
+                    <div className="w-auto text-center mt-4 fixed top-0 right-0 z-50">
+                        <h1>{Hello }</h1>
                         {showLoader && (
-                            <div className="w-full bg-blue-500 h-1 mt-2 relative">
-                                <div className="absolute top-0 left-0 h-full bg-blue-700 animate-loader"></div>
-                            </div>
+                                <div className="w-full absolute top-0 left-0 h-full bg-blue-700 animate-loader"></div>
                         )}
                     </div>
-                )}
+                 )}
             </div>
         </div>
     )
